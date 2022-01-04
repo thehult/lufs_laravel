@@ -1,0 +1,24 @@
+.carousel {
+    .carousel-item {
+        img {
+            width: auto;
+            height: 400px;
+            max-height: 400px;
+            object-fit: cover;
+            object-position: center;
+        }
+        
+    }
+
+    box-shadow: inset 0px 0px 26px 10px #000000;
+    .carousel-caption-centered {
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

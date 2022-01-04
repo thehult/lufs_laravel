@@ -1,0 +1,36 @@
+.card-group-featured {
+    display: flex;
+    flex-direction: row;
+
+    @include media-breakpoint-down(lg) {
+        flex-direction: column;
+    }
+}
+
+.card-featured {
+    display: flex;
+    flex-direction: row;
+    max-height: 180px;
+    width: 100%;
+
+    .card-body {
+        display: flex;
+        flex-direction: column;
+
+        .card-text {
+            flex-grow: 2;
+        }
+
+        .card-link {
+            align-self: flex-end;
+        }
+    }
+
+    img {
+        width: 178px;
+        height: 178px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+}

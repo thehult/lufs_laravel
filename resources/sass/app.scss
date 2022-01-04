@@ -6,3 +6,17 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+// Components
+@import 'navbar';
+@import 'newscarousel';
+@import 'featured-cards';
+@import 'news';
+
+.object-fit-cover {
+    object-fit: cover;
+}
+
+.object-fit-none {
+    object-fit: none;
+}
