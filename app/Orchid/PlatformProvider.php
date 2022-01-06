@@ -30,7 +30,7 @@ class PlatformProvider extends OrchidServiceProvider
         return [
             Menu::make('Skapa nyhet')
                 ->icon('pencil')
-                ->route('platform.news.create')
+                ->route('platform.news.edit')
                 ->title('Nyheter'),
 
             Menu::make('Example screen')

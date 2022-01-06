@@ -14,7 +14,7 @@ use Orchid\Screen\Screen;
 use Orchid\Support\Facades\Alert;
 use Orchid\Support\Facades\Layout;
 
-class NewsCreateScreen extends Screen
+class NewsEditScreen extends Screen
 {
     /**
      * Display header name.
