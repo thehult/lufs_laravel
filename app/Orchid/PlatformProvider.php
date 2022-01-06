@@ -32,6 +32,9 @@ class PlatformProvider extends OrchidServiceProvider
                 ->icon('pencil')
                 ->route('platform.news.edit')
                 ->title('Nyheter'),
+            Menu::make('Lista nyheter')
+                ->icon('list')
+                ->route('platform.news.list'),
 
             Menu::make('Example screen')
                 ->icon('monitor')

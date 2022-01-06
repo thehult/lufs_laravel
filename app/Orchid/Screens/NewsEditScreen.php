@@ -2,6 +2,7 @@
 
 namespace App\Orchid\Screens;
 
+use App\Models\News;
 use Illuminate\Http\Request;
 use Orchid\Screen\Actions\Button;
 use Orchid\Screen\Fields\CheckBox;
@@ -29,9 +30,15 @@ class NewsEditScreen extends Screen
      *
      * @return array
      */
-    public function query(): array
+    public function query(News $news): array
     {
-        return [];
+        $this->exists = $news->exists;
+
+        if($this->exists) 
+            $this->name = 'Redigera nyhet';
+        return [
+            'news' => $news
+        ];
     }
 
     /**
@@ -41,7 +48,15 @@ class NewsEditScreen extends Screen
      */
     public function commandBar(): array
     {
-        return [        ];
+        return [
+            Button::make('Spara')
+                ->icon('save')
+                ->method('saveNews'),
+            Button::make('Ta bort')
+                ->icon('trash')
+                ->method('remove')
+                ->canSee($this->exists),
+            ];
     }
 
     /**
@@ -92,12 +107,24 @@ class NewsEditScreen extends Screen
         ];
     }
 
-    public function saveNews(Request $request) {
+    public function saveNews(News $news, Request $request) {
         $request->validate([
             'title' => 'required|min:4|max:64',
             'content' => 'required|min:32'
         ]);
 
+        $news->fill($request->get('news'))->save();
+
         Alert::info('Nyhet publicerad!');
+        
+        return redirect()->route('platform.news.list');
+    }
+
+    public function remove(News $news) {
+        $news->delete();
+        
+        Alert::info('Nyhet borttagen!');
+        
+        return redirect()->route('platform.news.list');
     }
 }

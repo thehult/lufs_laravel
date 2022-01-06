@@ -20,5 +20,5 @@ class News extends Model
         'category',
         'author',
         'published_at'
-    ]
+    ];
 }
