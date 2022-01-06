@@ -9,6 +9,7 @@ use App\Orchid\Screens\Examples\ExampleFieldsScreen;
 use App\Orchid\Screens\Examples\ExampleLayoutsScreen;
 use App\Orchid\Screens\Examples\ExampleScreen;
 use App\Orchid\Screens\Examples\ExampleTextEditorsScreen;
+use App\Orchid\Screens\NewsCreateScreen;
 use App\Orchid\Screens\PlatformScreen;
 use App\Orchid\Screens\Role\RoleEditScreen;
 use App\Orchid\Screens\Role\RoleListScreen;
@@ -112,4 +113,6 @@ Route::screen('example-editors', ExampleTextEditorsScreen::class)->name('platfor
 Route::screen('example-cards', ExampleCardsScreen::class)->name('platform.example.cards');
 Route::screen('example-advanced', ExampleFieldsAdvancedScreen::class)->name('platform.example.advanced');
 
+
+Route::screen('news/create', NewsCreateScreen::class)->name('platform.news.create');
 //Route::screen('idea', 'Idea::class','platform.screens.idea');

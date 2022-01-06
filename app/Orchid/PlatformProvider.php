@@ -28,6 +28,11 @@ class PlatformProvider extends OrchidServiceProvider
     public function registerMainMenu(): array
     {
         return [
+            Menu::make('Skapa nyhet')
+                ->icon('pencil')
+                ->route('platform.news.create')
+                ->title('Nyheter'),
+
             Menu::make('Example screen')
                 ->icon('monitor')
                 ->route('platform.example')
