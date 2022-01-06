@@ -70,14 +70,6 @@ class NewsCreateScreen extends Screen
                     ->value(1)
                     ->sendTrueOrFalse()
                     ->title('Publicera till: '),
-                CheckBox::make('facebook')
-                    ->placeholder('Facebook')
-                    ->value(1)
-                    ->sendTrueOrFalse(),
-                CheckBox::make('instagram')
-                    ->placeholder('Instagram')
-                    ->value(1)
-                    ->sendTrueOrFalse(),
                 Select::make('category')
                     ->title('Kategori')
                     ->options([
