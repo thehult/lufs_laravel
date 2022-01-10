@@ -2,6 +2,8 @@
 
 namespace App\Orchid\Screens;
 
+use App\Models\News;
+use App\Orchid\Layouts\NewsListLayout;
 use Orchid\Screen\Actions\Button;
 use Orchid\Screen\Actions\Link;
 use Orchid\Screen\Screen;
@@ -13,7 +15,7 @@ class NewsListScreen extends Screen
      *
      * @var string
      */
-    public $name = 'NewsListScreen';
+    public $name = 'Nyheter';
 
     /**
      * Query data.
@@ -22,7 +24,9 @@ class NewsListScreen extends Screen
      */
     public function query(): array
     {
-        return [];
+        return [
+            'news' => News::paginate()
+        ];
     }
 
     /**
@@ -46,6 +50,8 @@ class NewsListScreen extends Screen
      */
     public function layout(): array
     {
-        return [];
+        return [
+            NewsListLayout::class
+        ];
     }
 }

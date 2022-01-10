@@ -27,16 +27,17 @@ class NewsListLayout extends Table
     protected function columns(): array
     {
         return [
-            TD::make('title', 'Titel')
-                ->render(function(News $news) {
-                    return Link::make($news->title)
-                        ->route('platform.news.edit', $news);
-                }),
-            TD::make('status', 'Status'),
+            TD::make('title', 'Titel'),
             TD::make('category', 'Kategori'),
+            TD::make('status', 'Status'),
             TD::make('published_at', 'Publicerad'),
             TD::make('created_at', 'Skapad'),
-            TD::make('updated_at', 'Uppdaterad')
+            TD::make('updated_at', 'Uppdaterad'),
+            TD::make('edit', '')
+                ->render(function(News $news) {
+                    return Link::make('Redigera')
+                        ->route('platform.news.edit', $news);
+                }),
         ];
     }
 }
