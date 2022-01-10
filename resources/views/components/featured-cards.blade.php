@@ -1,9 +1,9 @@
 
 
-<div class="card-group ms-2 card-group-featured">
+<div class="card-group card-group-featured">
 
     <!-- KLUBBEN -->
-    <div class="card mb-3 m-2 card-featured">
+    <div class="card mb-3 m-2 ms-0 card-featured">
         <img src="{{url('/img/logo/logo_512x512.png')}}" class="img-fluid" >
         <div class="card-body h-100">
             <h5 class="card-title">Klubben</h5>
@@ -23,7 +23,7 @@
     </div>
 
     <!-- ÖVRIGT -->
-    <div class="card mb-3 m-2 card-featured">
+    <div class="card mb-3 m-2 me-0 card-featured">
         <img src="{{url('/img/company_events.jpg')}}" class="" >
         <div class="card-body h-100">
             <h5 class="card-title">För företag</h5>

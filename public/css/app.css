@@ -11297,6 +11297,10 @@ textarea.form-control-lg {
 .carousel {
   box-shadow: inset 0px 0px 26px 10px #000000;
 }
+.carousel .carousel-item {
+  background-image: linear-gradient(105deg, #4899b7 4.55%, #212529 4.55%, #212529 50%, #4899b7 50%, #4899b7 54.55%, #212529 54.55%, #212529 100%);
+  background-size: 220px 821.05px;
+}
 .carousel .carousel-item img {
   width: auto;
   height: 400px;
@@ -11305,6 +11309,9 @@ textarea.form-control-lg {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+}
+.carousel .carousel-item h1, .carousel .carousel-item .h1 {
+  text-shadow: 0px 0px 10px black;
 }
 .carousel .carousel-caption-centered {
   right: 0;
@@ -11364,6 +11371,7 @@ textarea.form-control-lg {
   background-color: #4899b7;
   padding: 0.25rem 0.5rem;
   font-size: 0.7875rem;
+  box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.5);
 }
 .card-news .card-img-overlay {
   display: flex;
@@ -11373,9 +11381,11 @@ textarea.form-control-lg {
 }
 .card-news .card-img-overlay .card-title {
   margin-bottom: 0;
+  text-shadow: 0px 0px 10px black;
 }
 .card-news .card-img-overlay .news-timestamp {
   font-size: 0.7875rem;
+  text-shadow: 0px 0px 5px black;
 }
 
 .object-fit-cover {
@@ -11386,4 +11396,9 @@ textarea.form-control-lg {
 .object-fit-none {
   -o-object-fit: none;
      object-fit: none;
+}
+
+.bg-no-img {
+  background-image: linear-gradient(105deg, #4899b7 4.55%, #212529 4.55%, #212529 50%, #4899b7 50%, #4899b7 54.55%, #212529 54.55%, #212529 100%);
+  background-size: 220px 821.05px;
 }

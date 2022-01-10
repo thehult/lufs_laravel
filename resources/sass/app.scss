@@ -20,3 +20,8 @@
 .object-fit-none {
     object-fit: none;
 }
+
+.bg-no-img {
+    background-image: linear-gradient(105deg, $primary 4.55%, $dark 4.55%, $dark 50%, $primary 50%, $primary 54.55%, $dark 54.55%, $dark 100%);
+    background-size: 220.00px 821.05px;
+}
