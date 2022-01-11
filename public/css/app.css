@@ -11420,3 +11420,13 @@ textarea.form-control-lg {
   color: white;
   text-shadow: 0px 0px 5px black;
 }
+
+.container-narrow {
+  width: 100%;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 720px;
+  position: relative;
+}

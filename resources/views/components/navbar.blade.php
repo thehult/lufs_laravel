@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-secondary p-0">
-    <div class="container">
-        <a class="navbar-brand" href="#">
+    <div class="container container-navbar">
+        <a class="navbar-brand" href="/">
             <img src="{{url('/img/logo/logo_128x128.png')}}" alt="" height="64" >
         </a>
         <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,7 +9,7 @@
         <div class="collapse navbar-collapse" id="mainNav">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 mt-5 mt-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Startsida</a>
+                    <a class="nav-link active" aria-current="page" href="/">Startsida</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Klubben</a>

@@ -32,8 +32,14 @@
                 </div>
                 @endisset
             </div>
-
         @endisset
+        @empty($jumbotron)
+        @isset($pageTitle)
+            <div class="container-narrow mt-2">
+                <h1>{{ $pageTitle }}</h1>
+            </div>
+            @endisset
+        @endempty
         <main class="">
             @yield('content')
         </main>

@@ -17,7 +17,7 @@ Route::get('/', [App\Http\Controllers\FrontpageController::class, 'index'])->nam
 
 
 Route::get('/nyheter', [App\Http\Controllers\NewsController::class, 'list'])->name('news.list');
-Route::get('/nyheter/{newsId}', [App\Http\Controllers\NewsController::class, 'show'])->name('news.show');
+Route::get('/nyheter/{news}', [App\Http\Controllers\NewsController::class, 'show'])->name('news.show');
 
 Auth::routes();
 
