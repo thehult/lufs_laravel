@@ -13,7 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [App\Http\Controllers\FrontpageController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\FrontpageController::class, 'index'])->name('frontpage');
+
+
+Route::get('/nyheter', [App\Http\Controllers\NewsController::class, 'list'])->name('news.list');
+Route::get('/nyheter/{newsId}', [App\Http\Controllers\NewsController::class, 'show'])->name('news.show');
 
 Auth::routes();
 

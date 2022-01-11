@@ -23,6 +23,17 @@
     <div id="app">
         @include('components.navbar')
 
+        @isset($jumbotron)
+            <div class="jumbotron">
+                <img src="{{ $jumbotron }}" class="img-jumbotron" />
+                @isset($pageTitle)
+                <div class="container">
+                    <h1>{{ $pageTitle }}</h1>
+                </div>
+                @endisset
+            </div>
+
+        @endisset
         <main class="">
             @yield('content')
         </main>
