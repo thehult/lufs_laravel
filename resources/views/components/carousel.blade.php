@@ -16,7 +16,9 @@
                         <h1 class="fw-bold">{{ $feat->title }}</h1>
                         <a href="/nyheter/{{ $feat->id }}" class="btn btn-lg btn-secondary">LÄS MER</a>
                     </div>
+                    @isset($feat->image)
                     <img src="{{ $feat->image }}" class="d-block w-100" alt="{{ $feat->title }}">
+                    @endisset
                 </div>
             @endforeach
             <div @class(['carousel-item', 'carousel-item-join', 'active' => count($featured) == 0])>
