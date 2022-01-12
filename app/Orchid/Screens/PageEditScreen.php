@@ -96,6 +96,8 @@ class PageEditScreen extends Screen
 
         $fields = $request->get('page');
         $fields['author'] = Auth::user()->id;
+        if (!str_starts_with($fields['slug'], '/'))
+            $fields['slug'] = '/' . $fields['slug'];
 
         $page->fill($fields)->save();
 

@@ -22,3 +22,6 @@ Route::get('/nyheter/{news}', [App\Http\Controllers\NewsController::class, 'show
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::get('/{slug}', [\App\Http\Controllers\PageController::class, 'find'])->where('slug', '.*')->name('page');
