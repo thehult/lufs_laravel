@@ -58,7 +58,7 @@ class NewsEditScreen extends Screen
         return [
             Button::make('Spara')
                 ->icon('save')
-                ->method('saveNews'),
+                ->method('save'),
             Button::make('Ta bort')
                 ->icon('trash')
                 ->method('remove')
@@ -114,7 +114,7 @@ class NewsEditScreen extends Screen
         ];
     }
 
-    public function saveNews(News $news, Request $request) {
+    public function save(News $news, Request $request) {
         $request->validate([
             'news.title' => 'required|min:4|max:64',
             'news.content' => 'required|min:32'

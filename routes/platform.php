@@ -11,6 +11,8 @@ use App\Orchid\Screens\Examples\ExampleScreen;
 use App\Orchid\Screens\Examples\ExampleTextEditorsScreen;
 use App\Orchid\Screens\NewsEditScreen;
 use App\Orchid\Screens\NewsListScreen;
+use App\Orchid\Screens\PageEditScreen;
+use App\Orchid\Screens\PageListScreen;
 use App\Orchid\Screens\PlatformScreen;
 use App\Orchid\Screens\Role\RoleEditScreen;
 use App\Orchid\Screens\Role\RoleListScreen;
@@ -117,4 +119,8 @@ Route::screen('example-advanced', ExampleFieldsAdvancedScreen::class)->name('pla
 
 Route::screen('news/edit/{news?}', NewsEditScreen::class)->name('platform.news.edit');
 Route::screen('news', NewsListScreen::class)->name('platform.news.list');
+
+Route::screen('pages/edit/{news?}', PageEditScreen::class)->name('platform.pages.edit');
+Route::screen('pages', PageListScreen::class)->name('platform.pages.list');
+
 //Route::screen('idea', 'Idea::class','platform.screens.idea');

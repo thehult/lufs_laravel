@@ -2,12 +2,12 @@
 
 namespace App\Orchid\Layouts;
 
-use App\Models\News;
+use App\Models\Page;
 use Orchid\Screen\Actions\Link;
 use Orchid\Screen\Layouts\Table;
 use Orchid\Screen\TD;
 
-class NewsListLayout extends Table
+class PageListLayout extends Table
 {
     /**
      * Data source.
@@ -17,7 +17,7 @@ class NewsListLayout extends Table
      *
      * @var string
      */
-    protected $target = 'news';
+    protected $target = 'pages';
 
     /**
      * Get the table cells to be displayed.
@@ -27,16 +27,14 @@ class NewsListLayout extends Table
     protected function columns(): array
     {
         return [
-            TD::make('title', 'Rubrik'),
-            TD::make('category', 'Kategori'),
-            TD::make('status', 'Status'),
-            TD::make('published_at', 'Publicerad'),
+            TD::make('slug', 'Url'),
+            TD::make('title', 'Titel'),
             TD::make('created_at', 'Skapad'),
             TD::make('updated_at', 'Uppdaterad'),
             TD::make('edit', '')
-                ->render(function(News $news) {
+                ->render(function(Page $page) {
                     return Link::make('Redigera')
-                        ->route('platform.news.edit', $news);
+                        ->route('platform.pages.edit', $page);
                 }),
         ];
     }

@@ -29,9 +29,13 @@ class PlatformProvider extends OrchidServiceProvider
     {
         return [
             Menu::make('Nyheter')
-                ->icon('list')
+                ->icon('book-open')
                 ->route('platform.news.list')
                 ->title('Hemsidan'),
+
+            Menu::make('Sidor')
+                ->icon('notebook')
+                ->route('platform.pages.list'),
 
             Menu::make('Example screen')
                 ->icon('monitor')
