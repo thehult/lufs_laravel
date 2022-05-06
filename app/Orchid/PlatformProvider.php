@@ -36,6 +36,9 @@ class PlatformProvider extends OrchidServiceProvider
             Menu::make('Sidor')
                 ->icon('notebook')
                 ->route('platform.pages.list'),
+            Menu::make('Medlemmar')
+                ->icon('members')
+                ->route('platform.members.list'),
 
             Menu::make('Example screen')
                 ->icon('monitor')
