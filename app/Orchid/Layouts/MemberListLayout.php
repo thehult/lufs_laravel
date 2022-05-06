@@ -2,8 +2,13 @@
 
 namespace App\Orchid\Layouts;
 
+use Illuminate\Support\Facades\Log;
+
 use Orchid\Screen\Layouts\Table;
 use Orchid\Screen\TD;
+
+use App\Helpers\RegistrationHelper;
+use App\Models\Member;
 
 class MemberListLayout extends Table
 {
@@ -32,7 +37,13 @@ class MemberListLayout extends Table
             TD::make('phone_number', 'Telefonnummer'),
             TD::make('street_address', 'Gatuadress'),
             TD::make('zip_code', 'Postkod'),
-            TD::make('city', 'Stad')
+            TD::make('city', 'Stad'),
+            TD::make('is_active', 'Active')
+                ->render(function(Member $member) {
+                    if (RegistrationHelper::isActive($member->latestRegistration))
+                        return "Medlem";
+                    return "NOPE";
+                })
         ];
     }
 }
