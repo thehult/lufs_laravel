@@ -19,9 +19,15 @@ Route::get('/', [App\Http\Controllers\FrontpageController::class, 'index'])->nam
 Route::get('/nyheter', [App\Http\Controllers\NewsController::class, 'list'])->name('news.list');
 Route::get('/nyheter/{news}', [App\Http\Controllers\NewsController::class, 'show'])->name('news.show');
 
-Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Auth routes
+Route::get('logga-in', [App\Http\Controllers\AuthController::class, 'index'])->name('login');
+Route::post('login', [App\Http\Controllers\AuthController::class, 'login'])->name('postlogin'); 
+Route::get('bli-medlem', [App\Http\Controllers\AuthController::class, 'registration'])->name('registration');
+Route::post('register', [App\Http\Controllers\AuthController::class, 'register'])->name('postregistration'); 
+Route::get('logga-ut', [App\Http\Controllers\AuthController::class, 'logout'])->name('logout');
 
 
 Route::get('/{slug}', [\App\Http\Controllers\PageController::class, 'find'])->where('slug', '.*')->name('page');
